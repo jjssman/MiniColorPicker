@@ -1,4 +1,4 @@
-export class jjColorPicker {
+export class MiniColorPicker {
 
     constructor(options){
 

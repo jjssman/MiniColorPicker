@@ -1,2 +1,2 @@
 # MiniColorPicker
-Lightweight Color Picker Component
+A lightweight Color Picker Component

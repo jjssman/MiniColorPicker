@@ -1,8 +1,9 @@
-<<<<<<< HEAD
 ## MiniColorPicker
 <center>
 ##### A simple lightweight color picker component
+
 ![ScreenShot](https://raw.github.com/jjssman/MiniColorPicker/master/img/screenie.png)
+
 </center>
 
 ### Usage

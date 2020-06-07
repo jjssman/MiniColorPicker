@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jjColorPicker</title>
+    <title>MiniColorPicker</title>
 </head>
-<link rel="stylesheet" href="jjcolorpicker.css">
+<link rel="stylesheet" href="css/minicolorpicker.css">
 <style>
     * {
     margin: 0;
@@ -28,9 +28,9 @@
         <div id="colorPicker"></div>
     </div>
 
-    <script type="module" src="jjcolorpicker.js"></script>
+    <script type="module" src="js/minicolorpicker.js"></script>
     <script type="module">
-        import {jjColorPicker} from './jjcolorpicker.js';
+        import {jjColorPicker} from './js/jjcolorpicker.js';
 
         document.addEventListener("DOMContentLoaded", () => {
             let cp = new jjColorPicker({
@@ -42,9 +42,6 @@
                 resetButton: true,
                 resetButtonText: null
             });
-            /*let cp = new jjColorPicker({
-                element: document.getElementById('colorPicker')
-            });*/
             cp.onSelectColor((color) => {
                 console.log(color);
             });

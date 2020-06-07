@@ -1,15 +1,12 @@
 ## MiniColorPicker
 
-<p align="center">
+<center>
 
 *A simple lightweight color picker component*
 
-</p>
-<p align="center">
-
 ![ScreenShot](https://raw.github.com/jjssman/MiniColorPicker/master/docs/img/screenie.png)
 
-</p>
+</center>
 
 ### Usage
 
@@ -85,6 +82,8 @@ cp.onColorReset(() => {
 });
 ```
 ## Demo
+
+[https://jjssman.github.io/MiniColorPicker/docs/demo.html](https://jjssman.github.io/MiniColorPicker/docs/demo.html)
 
 ### Issues & Suggestions
 

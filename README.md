@@ -1,5 +1,6 @@
 ## MiniColorPicker
 <center>
+
 ##### A simple lightweight color picker component
 
 ![ScreenShot](https://raw.github.com/jjssman/MiniColorPicker/master/img/screenie.png)
@@ -14,21 +15,21 @@ You can either clone this repository or download the latest build as a zip from:
 Include it in your code:
 
 ```html
-  <script type="module" src="minicolorpicker.min.js"></script>
-  
-  <link href="minicolorpicker.css" rel="stylesheet"/>
+<script type="module" src="minicolorpicker.min.js"></script>
+
+<link href="minicolorpicker.css" rel="stylesheet"/>
 ```
 
 You can then bind the component to any HTML element:
 
 ```html
-	<div id="container"></div>
-  
-    <script language="javascript">
-      (function() {
+<div id="container"></div>
+
+<script language="javascript">
+    (function() {
         let cp = new MiniColorPicker({ element: document.getElementById('container') });
-      })();
-    </script>
+    })();
+</script>
 ```
 
 ### Options
@@ -69,7 +70,7 @@ The component has some events you can listen to.
 **OnColorSelect**
 ```javascript
 cp.onColorSelect((color) => {
-	console.log('New color selected: '+color);
+    console.log('New color selected: '+color);
 });
 ```
 

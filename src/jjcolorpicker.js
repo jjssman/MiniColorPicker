@@ -1,5 +1,3 @@
-import {parseCSSColor} from './csscolorparser.js';
-
 export class jjColorPicker {
 
     constructor(options){
@@ -39,12 +37,6 @@ export class jjColorPicker {
             for(let col = 0; col < colors[row].length; col++){
                 const btn = document.createElement('div');
                 btn.classList.add('colorBtn');
-                let rgb = parseCSSColor(colors[row][col]);
-                if(0.2126*rgb[0] + 0.7152*rgb[1] + 0.0722*rgb[2] > 127){
-                    btn.classList.add('light');
-                }else{
-                    btn.classList.add('dark');
-                }
                 btn.style.backgroundColor = colors[row][col];
                 btn.onclick = this._colorBtnClicked.bind(this);
                 rowDiv.appendChild(btn);
@@ -62,6 +54,15 @@ export class jjColorPicker {
         clickedBtn.classList.add('active');
         this.selectedButton = clickedBtn;
 
+        if(!clickedBtn.classList.contains('light') || !clickedBtn.classList.contains('dark')){
+            let rgb = this._parseCSSColor(window.getComputedStyle(clickedBtn).backgroundColor);
+            if(0.2126*rgb[0] + 0.7152*rgb[1] + 0.0722*rgb[2] > 127){
+                clickedBtn.classList.add('light');
+            }else{
+                clickedBtn.classList.add('dark');
+            }
+        }
+
         if(this._selectColorCallback)
             this._selectColorCallback(clickedBtn.style.backgroundColor);
     }
@@ -73,6 +74,10 @@ export class jjColorPicker {
 
         if(this._resetColorCallback)
             this._resetColorCallback();
+    }
+
+    _parseCSSColor(rgbStr){
+        return /rgb\(([0-9]+),\s*([0-9]+),\s*([0-9]+)\)/gi.exec(rgbStr).splice(1,3).map(v => parseInt(v));
     }
 
     onSelectColor = (callback) => {

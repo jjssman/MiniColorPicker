@@ -33,7 +33,7 @@
         import {jjColorPicker} from './jjcolorpicker.js';
 
         document.addEventListener("DOMContentLoaded", () => {
-            /*let cp = new jjColorPicker({
+            let cp = new jjColorPicker({
                 element: document.getElementById('colorPicker'),
                 colors: [
                     ['red', 'blue', 'yellow', 'orange', 'purple', 'pink', 'green', 'brown', 'white', 'black'],
@@ -41,10 +41,10 @@
                 ],
                 resetButton: true,
                 resetButtonText: null
-            });*/
-            let cp = new jjColorPicker({
-                element: document.getElementById('colorPicker')
             });
+            /*let cp = new jjColorPicker({
+                element: document.getElementById('colorPicker')
+            });*/
             cp.onSelectColor((color) => {
                 console.log(color);
             });

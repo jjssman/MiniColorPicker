@@ -1,10 +1,14 @@
 ## MiniColorPicker
 
 <p align="center">
+
 *A simple lightweight color picker component*
+
 </p>
 <p align="center">
+
 ![ScreenShot](https://raw.github.com/jjssman/MiniColorPicker/master/docs/img/screenie.png)
+
 </p>
 
 ### Usage

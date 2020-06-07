@@ -80,11 +80,11 @@ export class jjColorPicker {
         return /rgb\(([0-9]+),\s*([0-9]+),\s*([0-9]+)\)/gi.exec(rgbStr).splice(1,3).map(v => parseInt(v));
     }
 
-    onSelectColor = (callback) => {
+    onColorSelect = (callback) => {
         this._selectColorCallback = callback.bind(this);
     }
 
-    onResetColor = (callback) => {
+    onColorReset = (callback) => {
         this._resetColorCallback = callback;
     }
 

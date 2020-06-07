@@ -34,16 +34,13 @@
 
         document.addEventListener("DOMContentLoaded", () => {
             let cp = new MiniColorPicker({
-                element: document.getElementById('colorPicker'),
-                colors: [
-                    ['red', 'blue', 'yellow', 'orange', 'purple', 'pink', 'green', 'brown', 'white', 'black'],
-                    ['red', 'blue', 'yellow', 'orange', 'purple', 'pink', 'green', 'brown', 'white', 'black']
-                ],
-                resetButton: true,
-                resetButtonText: null
+                element: document.getElementById('colorPicker')
             });
-            cp.onSelectColor((color) => {
-                console.log(color);
+            cp.onColorSelect((color) => {
+                alert('ColorSelect Event triggered: '+color);
+            });
+            cp.onColorReset((color) => {
+                alert('ColorReset Event triggered');
             });
         });
     </script>
